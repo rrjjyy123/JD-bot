@@ -1,13 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { NasdaqData, StockData, MarketStatus, RateStatus, CrisisState, TopStocks } from '@/lib/types';
+import { NasdaqData, StockData, MarketStatus, RateStatus, CrisisState, TopStocks, RebalancingZone, MalttukZone } from '@/lib/types';
 import {
   detectTopChangeRisk,
   initialCrisisState,
   updateCrisisState,
-  RebalancingZone,
-  MalttukZone
+  findCurrentRebalancingZone,
+  findCurrentMalttukZone
 } from '@/lib/ruleEngine';
 import { getDemoBriefing } from '@/lib/geminiAI';
 import {
