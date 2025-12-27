@@ -10,6 +10,8 @@ import {
     ActionAdvice
 } from './types';
 
+export type { RebalancingZone, MalttukZone };
+
 // 리밸런싱 -25% 표 (평시, 종가 기준)
 // 2.5% 떨어질 때마다 10%씩 매도하여 현금 확보
 export function generateRebalancingTable(allTimeHigh: number): RebalancingZone[] {
